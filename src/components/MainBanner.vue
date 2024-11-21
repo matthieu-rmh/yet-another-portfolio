@@ -5,18 +5,30 @@ defineProps<{
 </script>
 
 <template>
-  <div class="main__banner__container">
-    <div>
-        <h1 class="green">{{ msg }}</h1>
+  <div id="main__banner__container">
+    <div style="background-color: lightgreen;">
+        <h1 id="leftside__bigtext__banner">{{ msg }}</h1>
     </div>
-    <div>
+    <div style="background-color: lightpink;">
         <h1>right</h1>
     </div>
   </div>
 </template>
 
 <style scoped>
+
+#main__banner__container{
+    display: flex;
+    width: 100%;
+    height: 35rem;
+}
+
+#main__banner__container div{
+    width: 50%;
+}
+
 h1 {
+
     font-weight: 500;
     font-size: 2.6rem;
     position: relative;
@@ -28,15 +40,18 @@ h1 {
     width: 100%;
     /* we set steps to 31 as we have a text of 31 charachters including 
      white-space*/
+}
+
+#leftside__bigtext__banner{
     animation: type 1.3s steps(31, end);
 }
 
-.main__banner__container h1,{
+#main__banner__container h1,{
   text-align: center;
 }
 
 @media (min-width: 1024px) {
-  .main__banner__container h1{
+  #main__banner__container h1{
     text-align: left;
   }
 }
