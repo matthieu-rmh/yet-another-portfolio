@@ -6,22 +6,37 @@ defineProps<{
 
 <template>
   <div id="main__banner__container">
-    <div class="main__banner__inner__container" style="background-color: lightgreen;">
+    <div class="main__banner__inner__container">
         <h1 id="leftside__bigtext__banner">{{ msg }}</h1>
         <div id="ticking__cursor"></div>
     </div>
-    <div class="main__banner__inner__container" style="background-color: lightpink;">
-        <h1>right</h1>
+    <div id="main__banner__img__circle__container" class="main__banner__inner__container">
+        <div id="img__circle__container"></div>
     </div>
   </div>
 </template>
 
 <style scoped>
 
+#img__circle__container{
+    display: block;
+    height: 20rem;
+    width: 20rem !important;
+    margin: auto;
+    border-radius: 20rem;
+    border: 5px solid white;
+}
+
+#main__banner__img__circle__container{
+    display: block !important;
+    align-content: center !important;
+}
+
 #ticking__cursor{
     width: 0.5rem !important;
     height: 5rem;
-    background-color: pink;
+    background-color: #3e8fb0;
+
 }
 
 .main__banner__inner__container{
@@ -56,7 +71,6 @@ h1 {
 }
 
 #leftside__bigtext__banner{
-    background-color: brown;
     /*width: 100%;*/
     width: 24ch;
     /*width: fit-content;*/
